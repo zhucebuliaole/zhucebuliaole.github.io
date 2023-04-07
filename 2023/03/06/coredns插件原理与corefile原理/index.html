@@ -5,7 +5,7 @@
 
 ga('create', 'G-66E4L626Z5', 'https://lele233.tech');
 ga('send', 'pageview');</script><!-- End Google Analytics -->
-<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="什么是coredns？coredns是谷歌开发并开源的一款dns解析服务器。其使用golang开发，提供了插件跨平台等特性。
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/icon.svg"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="什么是coredns？coredns是谷歌开发并开源的一款dns解析服务器。其使用golang开发，提供了插件跨平台等特性。
 coredns插件注册插件coredns框架会在初始化时对插件进行注册，注册过后的插件可以被配置和调用。这里用 log 插件举例说明, 在 init() 内注册 log 的 setup 装载方法, 然后使用 AddPlugin 注册一个 plugin.Plugin 方法. 其目的就是要实现中间件那种调用链。其调用遵循一个调用链的倒叙。代码位置: plugin/log/setup.go  
 // 注册 log 插件, 把 log 的 setup 装载方法注册进去.
 func init() { plugin.Register(&quot;log&quot;, setup) }
