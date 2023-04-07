@@ -22,9 +22,9 @@ social:
 
 user:
   name: Qile Liang
-  avatar: 
+  avatar: images/user.png
   location: Hong Kong
-  description: Cyber security| Machine Learning| Backend| Web3
+  description: Cyber security | Machine Learning | Backend | Web3
   footnotes: # footnotes
 
 # documents: https://github.com/utterance/utterances
@@ -51,7 +51,7 @@ comment_disqus:
 appearance: auto # Default value is auto
 
 # Miscellaneous
-favicon: images/favicon.ico
+favicon: images/icon.svg
 
 friend_links:
   - title: Google
