@@ -1,0 +1,77 @@
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Archive: /archives
+
+widgets:
+  - tag
+  - archive
+  - recent_posts
+  - category
+  - profile
+
+# social config
+social:
+  zhihu: https://www.zhihu.com/people/liang-qi-le
+  # twitter: /
+  # facebook: /
+  linkedin: https://www.linkedin.com/in/qile-liang-89b178194/
+  # instagram: /
+  github: https://github.com/zhucebuliaole
+
+user:
+  name: Qile Liang
+  avatar: 
+  location: Hong Kong
+  description: Cyber security| Machine Learning| Backend| Web3
+  footnotes: # footnotes
+
+# documents: https://github.com/utterance/utterances
+# API config: https://utteranc.es/
+comment_utteranc:
+  enable: true
+  repo: zhucebuliaole/zhucebuliaole.github.io # your blog repo
+
+
+# documents: https://valine.js.org/quickstart.html
+comment_valine:
+  enable: false
+  appId:
+  appKey:
+
+comment_disqus:
+    enable: false
+    url:  # the url of your website main domain like this https://xxx.xxx/
+    name: # the short name in disqus
+
+# dark
+# light
+# user-can-set
+appearance: auto # Default value is auto
+
+# Miscellaneous
+favicon: images/favicon.ico
+
+friend_links:
+  - title: Google
+    link: https://www.google.com/
+  - title: Github
+    link: https://www.github.com/
+  - title: V2EX
+    link: https://v2ex.com/
+  - title: Twitter
+    link: https://twitter.com/
+
+# Google Analytics
+ga_track_id: G-66E4L626Z5
+ga_domain: https://lele233.tech
+
+# Baidu Analytics
+ba_track_id:
+
+# picture of about page
+about_pic: about.png
+
+image_zoom:
+  enable: true
