@@ -91,6 +91,8 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
+  -  CNAME
+  -  .nojekyll
 exclude:
 ignore:
 
@@ -105,3 +107,12 @@ deploy:
   type: git
   repo: https://github.com/zhucebuliaole/zhucebuliaole.github.io.git
   branch: master
+  ignore_hidden: false
+
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  rel: false
+  tags: true
+  categories: true
