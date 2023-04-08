@@ -13,12 +13,12 @@ widgets:
 
 # social config
 social:
-  zhihu: https://www.zhihu.com/people/liang-qi-le
+  zhihu: www.zhihu.com/people/liang-qi-le
   # twitter: /
   # facebook: /
-  linkedin: https://www.linkedin.com/in/qile-liang-89b178194/
+  linkedin: www.linkedin.com/in/qile-liang-89b178194/
   # instagram: /
-  github: https://github.com/zhucebuliaole
+  github: github.com/zhucebuliaole
 
 user:
   name: Qile Liang
