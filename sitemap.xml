@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://lele233.tech/2023/04/07/electron-require-is-not-defined/</loc>
+    
+    <lastmod>2023-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lele233.tech/2023/03/06/coredns%E6%8F%92%E4%BB%B6%E5%8E%9F%E7%90%86%E4%B8%8Ecorefile%E5%8E%9F%E7%90%86/</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lele233.tech/about/index.html</loc>
+    
+    <lastmod>2023-02-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lele233.tech/categories/index.html</loc>
+    
+    <lastmod>2023-02-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lele233.tech/tags/index.html</loc>
+    
+    <lastmod>2023-02-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://lele233.tech/</loc>
+    <lastmod>2023-04-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+
+  
+</urlset>
