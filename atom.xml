@@ -6,7 +6,7 @@
   <link href="https://lele233.tech/atom.xml" rel="self"/>
   
   <link href="https://lele233.tech/"/>
-  <updated>2023-04-07T10:25:53.114Z</updated>
+  <updated>2023-06-19T12:55:53.290Z</updated>
   <id>https://lele233.tech/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>golang  xxx is relative, but relative import paths are not supported in module mode</title>
+    <link href="https://lele233.tech/2023/06/19/golang-xxx-is-relative-but-relative-import-paths-are-not-supported-in-module-mode/"/>
+    <id>https://lele233.tech/2023/06/19/golang-xxx-is-relative-but-relative-import-paths-are-not-supported-in-module-mode/</id>
+    <published>2023-06-19T12:26:18.000Z</published>
+    <updated>2023-06-19T12:55:53.290Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Golang-package-management"><a href="#Golang-package-management" class="headerlink" title="Golang package management"></a>Golang package management</h1><p>Go has its own package management system named “go modules”. It was introduced in Go 1.11as an official solution for golang’s package management. With go modules mode, we no longer need to place our code in <strong>$GOPATH</strong> directory. </p><h1 id="Go-init"><a href="#Go-init" class="headerlink" title="Go init"></a>Go init</h1><p>In golang modules mode, we cant import our package in our project directly ( like what we do in python). Before we import our package, we need make it become a golang package first. And we should use <code>go mod init</code> command to make become a golang package in our project. </p><p>Usage:</p><pre><code>go mod init [module-path]</code></pre><p>Example:</p><pre><code># run it in "mypackage" foldergo mod init example.com/m</code></pre><p>If we have a package named “test”. Now we can import it from the path <strong>“example.com/m/mypackage/test”</strong>. </p><p>And after we run init command we can get a file named <code>go.mod</code> at the root of the project. It defines the module’s name, the Go version compatibility, and the required dependencies. The <code>go.mod</code> file is automatically created and updated as you add or remove dependencies.</p><h1 id="Solve-this-problem"><a href="#Solve-this-problem" class="headerlink" title="Solve this problem"></a>Solve this problem</h1><p>The answer is clear now. We shouldn’t use relative path to import our package if we want to use module mode. Just create new module and import it.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Golang-package-management&quot;&gt;&lt;a href=&quot;#Golang-package-management&quot; class=&quot;headerlink&quot; title=&quot;Golang package management&quot;&gt;&lt;/a&gt;Golang pack</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>electron require is not defined</title>

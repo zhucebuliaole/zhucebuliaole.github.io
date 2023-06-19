@@ -1,3 +1,4 @@
+https://lele233.tech/2023/06/19/golang-xxx-is-relative-but-relative-import-paths-are-not-supported-in-module-mode/
 https://lele233.tech/2023/04/07/electron-require-is-not-defined/
 https://lele233.tech/2023/03/06/coredns%E6%8F%92%E4%BB%B6%E5%8E%9F%E7%90%86%E4%B8%8Ecorefile%E5%8E%9F%E7%90%86/
 https://lele233.tech/about/index.html

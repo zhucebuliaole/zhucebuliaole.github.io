@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>golang  xxx is relative, but relative import paths are not supported in module mode</title>
+      <link href="/2023/06/19/golang-xxx-is-relative-but-relative-import-paths-are-not-supported-in-module-mode/"/>
+      <url>/2023/06/19/golang-xxx-is-relative-but-relative-import-paths-are-not-supported-in-module-mode/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Golang-package-management"><a href="#Golang-package-management" class="headerlink" title="Golang package management"></a>Golang package management</h1><p>Go has its own package management system named “go modules”. It was introduced in Go 1.11as an official solution for golang’s package management. With go modules mode, we no longer need to place our code in <strong>$GOPATH</strong> directory. </p><h1 id="Go-init"><a href="#Go-init" class="headerlink" title="Go init"></a>Go init</h1><p>In golang modules mode, we cant import our package in our project directly ( like what we do in python). Before we import our package, we need make it become a golang package first. And we should use <code>go mod init</code> command to make become a golang package in our project. </p><p>Usage:</p><pre><code>go mod init [module-path]</code></pre><p>Example:</p><pre><code># run it in "mypackage" foldergo mod init example.com/m</code></pre><p>If we have a package named “test”. Now we can import it from the path <strong>“example.com/m/mypackage/test”</strong>. </p><p>And after we run init command we can get a file named <code>go.mod</code> at the root of the project. It defines the module’s name, the Go version compatibility, and the required dependencies. The <code>go.mod</code> file is automatically created and updated as you add or remove dependencies.</p><h1 id="Solve-this-problem"><a href="#Solve-this-problem" class="headerlink" title="Solve this problem"></a>Solve this problem</h1><p>The answer is clear now. We shouldn’t use relative path to import our package if we want to use module mode. Just create new module and import it.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>electron require is not defined</title>
       <link href="/2023/04/07/electron-require-is-not-defined/"/>
       <url>/2023/04/07/electron-require-is-not-defined/</url>

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lele233.tech/2023/06/19/golang-xxx-is-relative-but-relative-import-paths-are-not-supported-in-module-mode/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lele233.tech/2023/04/07/electron-require-is-not-defined/</loc>
     
     <lastmod>2023-04-07</lastmod>
@@ -49,7 +58,7 @@
 
   <url>
     <loc>https://lele233.tech/</loc>
-    <lastmod>2023-04-16</lastmod>
+    <lastmod>2023-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
