@@ -95,3 +95,14 @@ class Dog:
 ## Summary
 
 We can call class attributes by using **"self"** . If the attribute is a immutable data type, it will create an instance attribute implicitly. But if the attribute is a mutable data type, we can still call it but will modify the shared class attribute.
+
+# Another way to modify class attributes in method.
+
+We can call class attributes by using `self.__class__.your_attribute`
+
+In my example, we can write a method like that:
+
+```python
+    def change_class_var(self):
+        self.__class__.class_var += 1
+```
