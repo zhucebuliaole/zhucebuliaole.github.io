@@ -6,7 +6,7 @@
   <link href="https://lele233.tech/atom.xml" rel="self"/>
   
   <link href="https://lele233.tech/"/>
-  <updated>2023-09-20T13:26:08.871Z</updated>
+  <updated>2023-10-11T13:10:36.224Z</updated>
   <id>https://lele233.tech/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to redirect output of print to log in python</title>
+    <link href="https://lele233.tech/2023/10/11/How-to-redirect-output-of-print-to-log-in-python/"/>
+    <id>https://lele233.tech/2023/10/11/How-to-redirect-output-of-print-to-log-in-python/</id>
+    <published>2023-10-11T12:47:32.000Z</published>
+    <updated>2023-10-11T13:10:36.224Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="How-“print”-work-in-python"><a href="#How-“print”-work-in-python" class="headerlink" title="How “print” work in python?"></a>How “print” work in python?</h1><p>In python print point to sys.stdout.write. In other words, when calling print, python will call <strong>sys.stdout.write(obj+’\n’) .</strong></p><p>Let me give an example to prof that.</p><p>First I define a function named fun1 which write parameter to a file test.txt. Then make sys.stdout.write point to fun1. And try to print something.</p><pre><code class="python">import sysdef fun1(temp):    with open("test.txt","a+") as file:        file.write(temp)sys.stdout.write=fun1print(1)print(2)print(3)</code></pre><p>Then we will find we have a new file where it’s content is 1 2 3.</p><h1 id="How-to-redirect-it-to-logging"><a href="#How-to-redirect-it-to-logging" class="headerlink" title="How to redirect it to logging?"></a>How to redirect it to logging?</h1><p>So we have known how print work . Then we need redirct it.</p><p>We should make stdout point to another class which <strong>overwrite write and flush</strong> <strong>method</strong>. Like that:</p><pre><code class="python">class LoggerWriter:    def __init__(self, logger):        self.logger = logger    def write(self, message):        self.logger.info(message)    def flush(self):        pass</code></pre><p>Besides, we should save a pointer to origin stdout. </p><p>The complete code to do it  ( using decorator ):</p><pre><code class="python">import loggingimport sysimport osimport datetimedef log_prints(func):    logger = logging.getLogger(__name__)    if logger.hasHandlers():        return logger    log_file = os.path.join("./log"                            , os.path.basename(sys.argv[0]).replace(".py", "_%s.log" \                                                                    % datetime.datetime.now().strftime("%Y%m%d")))    handler = logging.FileHandler(log_file)    formatter = logging.Formatter('%(asctime)s %(funcName)-12s %(levelname)-8s %(message)s')    handler.setFormatter(formatter)    logger.addHandler(handler)    logger.addHandler(logging.StreamHandler())    logger.setLevel(logging.DEBUG)    logger.info("%s started by %s" % (os.path.basename(sys.argv[0]), os.getlogin()))    def wrapper(*args, **kwargs):        import sys        original_stdout = sys.stdout        sys.stdout = LoggerWriter(logger)        result = func(*args, **kwargs)        sys.stdout = original_stdout        return result    return wrapperclass LoggerWriter:    def __init__(self, logger):        self.logger = logger    def write(self, message):        self.logger.info(message)    def flush(self):        pass</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;How-“print”-work-in-python&quot;&gt;&lt;a href=&quot;#How-“print”-work-in-python&quot; class=&quot;headerlink&quot; title=&quot;How “print” work in python?&quot;&gt;&lt;/a&gt;How “pr</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Can I call class variables without cls?</title>
