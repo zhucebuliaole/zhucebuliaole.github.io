@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Write a singleton in python by import module</title>
+      <link href="/2023/10/11/Write-a-singleton-in-python-by-import-module/"/>
+      <url>/2023/10/11/Write-a-singleton-in-python-by-import-module/</url>
+      
+        <content type="html"><![CDATA[<h1 id="What-is-singleton"><a href="#What-is-singleton" class="headerlink" title="What is singleton?"></a>What is singleton?</h1><p><strong>Singleton</strong> is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.</p><h1 id="How-to-implement-singleton-using-module"><a href="#How-to-implement-singleton-using-module" class="headerlink" title="How to implement singleton using module?"></a>How to implement singleton using module?</h1><p>In python it is easy to implement singleton using module. Init a instance is all you need.</p><pre><code class="python">class xxx:# implement your class# only one instancemy_instance = xxx()</code></pre><p>Then if you import my_instance on other files you can have a singleton instance. However, if you implement singleton by this way you should know the instance will init at the begining. In other words, <strong>there is no lazy loading</strong>. </p><h1 id="Why-this-way-can-work"><a href="#Why-this-way-can-work" class="headerlink" title="Why this way can work?"></a>Why this way can work?</h1><p><a href="https://docs.python.org/3/reference/import.html#:~:text=5.3.1.%20The,corresponding%20module%20object.">It involves the import system in python</a>. If a module has been imported , python will not import it again but will check if it be binded to another name. </p><blockquote><p>The first place checked during import search is <a href="https://docs.python.org/3/library/sys.html#sys.modules" title="sys.modules"><code>sys.modules</code></a>. This mapping serves as a cache of all modules that have been previously imported, including the intermediate paths. So if <code>foo.bar.baz</code> was previously imported, <a href="https://docs.python.org/3/library/sys.html#sys.modules" title="sys.modules"><code>sys.modules</code></a> will contain entries for <code>foo</code>, <code>foo.bar</code>, and <code>foo.bar.baz</code>. Each key will have as its value the corresponding module object.</p><p>During import, the module name is looked up in <a href="https://docs.python.org/3/library/sys.html#sys.modules" title="sys.modules"><code>sys.modules</code></a> and if present, the associated value is the module satisfying the import, and the process completes. However, if the value is <code>None</code>, then a <a href="https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError" title="ModuleNotFoundError"><code>ModuleNotFoundError</code></a> is raised. If the module name is missing, Python will continue searching for the module.</p></blockquote><p>So when you import your module, the init method will be invok only one time. Then you can say that it is a singleton here.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>How to redirect output of print to log in python</title>
       <link href="/2023/10/11/How-to-redirect-output-of-print-to-log-in-python/"/>
       <url>/2023/10/11/How-to-redirect-output-of-print-to-log-in-python/</url>

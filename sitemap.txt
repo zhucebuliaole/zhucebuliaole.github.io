@@ -1,3 +1,4 @@
+https://lele233.tech/2023/10/11/Write-a-singleton-in-python-by-import-module/
 https://lele233.tech/2023/10/11/How-to-redirect-output-of-print-to-log-in-python/
 https://lele233.tech/2023/09/19/Can-I-call-class-variables-without-cls/
 https://lele233.tech/about/index.html
